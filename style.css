@@ -1,0 +1,127 @@
+body {
+    background-color: rgb(45, 68, 240);
+    background-color: #0f1228;
+    overflow-x: hidden;
+    color: #e7e9f0;
+}
+
+
+/* head Image and Head Text */
+.head-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.head-img {
+    width: auto;
+    transition: max-width 1s, min-width 1s;
+}
+
+.head-img-expand {
+    /* min-width: 600px; */
+    max-width: 600px;
+}
+
+.head-img-contract {
+    min-width: 300px;
+    max-width: 300px;
+}
+
+.head-text {
+    font-family: 'Hachi Maru Pop', cursive;
+    margin: 5px 0 15px 0;
+    /* font-size: 20px; */
+    transition: font-size 1s;
+}
+
+.head-text-expand {
+    font-size: 40px;
+}
+
+.head-text-contract {
+    font-size: 20px;
+}
+
+
+
+/* Search-Box */
+.search-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+}
+
+.search-input {
+    padding: 8px 15px;
+    font-size: 15px;
+    width: 250px;
+    border-width: 0px;
+    background: #a592f2;
+    color: #e7e9f0;
+    box-shadow: 0 0 5px rgba(255, 255, 0.5);
+}
+
+.search-input::placeholder {
+    color: #e7e9f0;
+}
+
+
+/* Result Container */
+.result-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+/* NameCard */
+.NameCard-container {
+    color: #e7e9f0;
+    background-color: #282d4f;
+    margin: 10px 15px;
+    min-width: 75px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.1);
+    transition: background 0.35s;
+    display: flex;
+    justify-content: center;
+}
+
+.NameCard:hover {
+    background-color: #4a5079;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
+}
+
+.NameCard-link {
+    text-decoration: none;
+}
+
+.NameCard-element {
+    margin: 0px;
+    font-weight: 100;
+}
+
+
+/* Responsiveness */
+@media (max-width: 600px) {
+    .head-img-expand {
+        /* min-width: 600px; */
+        max-width: 300px;
+    }
+
+    .head-text-expand {
+        font-size: 30px;
+    }
+
+    .search-input {
+        padding: 6px 12px;
+        font-size: 12px;
+        width: 200px;
+    }
+}
